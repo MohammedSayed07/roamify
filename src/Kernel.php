@@ -18,6 +18,7 @@ namespace App;
 use Pimcore\Bundle\AdminBundle\PimcoreAdminBundle;
 use Pimcore\Bundle\QuillBundle\PimcoreQuillBundle;
 use Pimcore\HttpKernel\BundleCollection\BundleCollection;
+use Pimcore\Bundle\DataHubBundle\PimcoreDataHubBundle;
 use Pimcore\Kernel as PimcoreKernel;
 
 class Kernel extends PimcoreKernel
@@ -34,6 +35,9 @@ class Kernel extends PimcoreKernel
         }
         if (class_exists(PimcoreQuillBundle::class)) {
             $collection->addBundle(new PimcoreQuillBundle());
+        }
+         if (class_exists(PimcoreDataHubBundle::class)) {
+            $collection->addBundle(new PimcoreDataHubBundle());
         }
     }
 }

@@ -1,0 +1,406 @@
+pimcore_data_hub:
+    configurations:
+        graphql_endpoint:
+            general:
+                active: true
+                type: graphql
+                name: graphql_endpoint
+                description: ''
+                group: ''
+                sqlObjectCondition: ''
+                modificationDate: 1767139715
+                path: null
+                createDate: 1766340978
+            schema:
+                queryEntities:
+                    Accommodation:
+                        id: Accommodation
+                        name: Accommodation
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: name
+                                        label: Name
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: location
+                                        label: Location
+                                        dataType: geopoint
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: reservation
+                                        label: Reservation
+                                        dataType: manyToOneRelation
+                                    isOperator: false
+                    Company:
+                        id: Company
+                        name: Company
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: companyName
+                                        label: 'Company Name'
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: email
+                                        label: Email
+                                        dataType: email
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: location
+                                        label: Location
+                                        dataType: geopoint
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: phoneNumber
+                                        label: 'Phone Number'
+                                        dataType: numeric
+                                    isOperator: false
+                    Customer:
+                        id: Customer
+                        name: Customer
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: firstname
+                                        label: Firstname
+                                        dataType: firstname
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: lastname
+                                        label: Lastname
+                                        dataType: lastname
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: gender
+                                        label: Gender
+                                        dataType: gender
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: email
+                                        label: Email
+                                        dataType: email
+                                    isOperator: false
+                    CustomerBookedReservations:
+                        id: CustomerBookedReservations
+                        name: CustomerBookedReservations
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: customer
+                                        label: Customer
+                                        dataType: manyToOneRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: reservation
+                                        label: Reservation
+                                        dataType: manyToOneRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: paidPrice
+                                        label: 'Paid Price'
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: date
+                                        label: Date
+                                        dataType: date
+                                    isOperator: false
+                    CustomerInstalments:
+                        id: CustomerInstalments
+                        name: CustomerInstalments
+                    CustomerPayment:
+                        id: CustomerPayment
+                        name: CustomerPayment
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: customer
+                                        label: Customer
+                                        dataType: manyToOneRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: totalPrice
+                                        label: 'Total Price'
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: date
+                                        label: Date
+                                        dataType: date
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: isPaid
+                                        label: 'Is Paid'
+                                        dataType: checkbox
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: instalmentsNumber
+                                        label: 'Instalments Number'
+                                        dataType: numeric
+                                    isOperator: false
+                    Reservation:
+                        id: Reservation
+                        name: Reservation
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: title
+                                        label: Title
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: description
+                                        label: Description
+                                        dataType: wysiwyg
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: reservationType
+                                        label: 'Reservation Type'
+                                        dataType: select
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: availabeReservation
+                                        label: 'Availabe Reservation'
+                                        dataType: checkbox
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: company
+                                        label: Company
+                                        dataType: manyToOneRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: images
+                                        label: Images
+                                        dataType: imageGallery
+                                    isOperator: false
+                    ReservationInternalTrip:
+                        id: ReservationInternalTrip
+                        name: ReservationInternalTrip
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: name
+                                        label: Name
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: description
+                                        label: Description
+                                        dataType: wysiwyg
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: price
+                                        label: Price
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: reservation
+                                        label: Reservation
+                                        dataType: manyToOneRelation
+                                    isOperator: false
+                    ReservationReviews:
+                        id: ReservationReviews
+                        name: ReservationReviews
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: reservation
+                                        label: 'Reservation '
+                                        dataType: manyToOneRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: customer
+                                        label: Customer
+                                        dataType: manyToOneRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: comment
+                                        label: Comment
+                                        dataType: textarea
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: rate
+                                        label: Rate
+                                        dataType: slider
+                                    isOperator: false
+                    Unit:
+                        id: Unit
+                        name: Unit
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: number
+                                        label: Number
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: numberOfRooms
+                                        label: 'Number Of Rooms'
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: numberOfBeds
+                                        label: 'Number Of Beds'
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: numberOfBathrooms
+                                        label: 'Number Of Bathrooms'
+                                        dataType: numeric
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: view
+                                        label: View
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: facing
+                                        label: Facing
+                                        dataType: input
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: accommodation
+                                        label: Accommodation
+                                        dataType: manyToOneRelation
+                                    isOperator: false
+                    UnitUtilities:
+                        id: UnitUtilities
+                        name: UnitUtilities
+                        columnConfig:
+                            columns:
+                                -
+                                    attributes:
+                                        attribute: unit
+                                        label: Unit
+                                        dataType: manyToManyObjectRelation
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: isWifi
+                                        label: 'Is Wifi'
+                                        dataType: checkbox
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: isTv
+                                        label: 'Is Tv'
+                                        dataType: checkbox
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: isAirConditioner
+                                        label: 'Is Air Conditioner'
+                                        dataType: checkbox
+                                    isOperator: false
+                                -
+                                    attributes:
+                                        attribute: moreUtilities
+                                        label: 'More Utilities'
+                                        dataType: textarea
+                                    isOperator: false
+                mutationEntities: {  }
+                specialEntities:
+                    document:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    document_folder:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    asset:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    asset_folder:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    asset_listing:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    object_folder:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    translation:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+                    translation_listing:
+                        read: false
+                        create: false
+                        update: false
+                        delete: false
+            security:
+                method: datahub_apikey
+                apikey:
+                    - ce0a900109b081f80929b9a9e6ec381e
+                skipPermissionCheck: true
+                disableIntrospection: false
+            workspaces:
+                asset:
+                    -
+                        read: true
+                        cpath: /
+                        create: false
+                        update: false
+                        delete: false
+                        id: extModel395-1
+                document: {  }
+                object: {  }
+            permissions:
+                user: {  }
+                role: {  }
