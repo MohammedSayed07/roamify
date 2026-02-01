@@ -21,7 +21,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
    'title' => 'Reservation',
    'description' => '',
    'creationDate' => NULL,
-   'modificationDate' => 1767137517,
+   'modificationDate' => 1769909032,
    'userOwner' => 2,
    'userModification' => 2,
    'parentClass' => '',
@@ -162,7 +162,7 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                   1 => 
                   array (
                     'key' => 'Appartement ',
-                    'value' => 'Appartement ',
+                    'value' => 'Appartement',
                   ),
                 ),
                  'defaultValue' => '',
