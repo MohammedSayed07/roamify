@@ -7,6 +7,7 @@
 /build/
 /phpunit.xml
 /public/bundles/
+/cache/
 
 # local config
 /.env.local

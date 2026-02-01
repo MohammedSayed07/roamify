@@ -96,14 +96,18 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 array (
                 ),
                  'classes' => 
-                array (
-                ),
+                        array (
+                           0 => 
+                           array (
+                              'classes' => 'Customer',
+                           ),
+                        ),
                  'displayMode' => 'grid',
                  'pathFormatterClass' => '',
                  'assetInlineDownloadAllowed' => false,
                  'assetUploadPath' => '',
                  'allowToClearRelation' => true,
-                 'objectsAllowed' => false,
+                 'objectsAllowed' => true,
                  'assetsAllowed' => false,
                  'assetTypes' => 
                 array (
@@ -134,14 +138,18 @@ return \Pimcore\Model\DataObject\ClassDefinition::__set_state(array(
                 array (
                 ),
                  'classes' => 
-                array (
-                ),
+                        array (
+                           0 => 
+                           array (
+                              'classes' => 'Reservation',
+                           ),
+                        ),
                  'displayMode' => 'grid',
                  'pathFormatterClass' => '',
                  'assetInlineDownloadAllowed' => false,
                  'assetUploadPath' => '',
                  'allowToClearRelation' => true,
-                 'objectsAllowed' => false,
+                 'objectsAllowed' => true,
                  'assetsAllowed' => false,
                  'assetTypes' => 
                 array (
